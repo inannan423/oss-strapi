@@ -4,7 +4,13 @@ import type { IStrapiImage, IResponse } from '@/types'
 import { Message, Popconfirm, Tooltip } from '@arco-design/web-react'
 import { IconCopy, IconDelete } from '@arco-design/web-react/icon'
 
-export default function Files (): JSX.Element {
+export default function Files (
+  {
+    update
+  }: {
+    update: number
+  }
+): JSX.Element {
   const [getted, setGetted] = React.useState(false)
   const token = useToken()
   const api = useApi()
@@ -26,7 +32,7 @@ export default function Files (): JSX.Element {
       console.log(e)
       Message.error(language.i18n.error)
     })
-  }, [getted])
+  }, [getted, update])
   const deleteFile = (id: string): void => {
     void fetch(api.apiPrefix + '/api/upload/files/' + id, {
       method: 'DELETE',

@@ -85,6 +85,26 @@ export default function Setting ({ visible, onDrawerOk, onDrawerCancel }: {
                     }}
                   />
               </Form.Item>
+              <div className={'w-full h-max bg-gray-100 px-2 py-3 rounded-md'}>
+                <div className={'flex gap-1 text-lg font-mono items-center justify-center'}>
+                    Made with <div className={'text-red-500'}>❤</div> by <a className={'text-blue-500'} href='https://jetlab.live' target='_blank' rel="noreferrer">JetLab</a>
+                </div>
+              </div>
+              <div className={'w-full h-max bg-gray-100 px-2 py-3 rounded-md my-1'}>
+                  <div className={'flex gap-1 text-base items-center justify-center'}>
+                        Powered by
+                      <a href={'https://netlify.com/'} target={'_blank'} rel="noreferrer">
+                            <img alt={'netlify'} src={'/Netlify.svg'} className={'h-8'} />
+                      </a>
+                  </div>
+              </div>
+              <div className={'w-full h-max bg-gray-100 px-2 py-3 rounded-md'}>
+                  <div className={'flex gap-1 text-base items-center justify-center'}>
+                      Star me on <a href={'https://github.com/inannan423/oss-strapi'} target={'_blank'} rel="noreferrer">
+                       GitHub
+                        </a>
+                  </div>
+              </div>
           </Form>
       </Drawer>
     </div>

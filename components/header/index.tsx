@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { IconSettings } from '@arco-design/web-react/icon'
-import { Alert } from '@arco-design/web-react'
 import { Setting } from '@/components'
 
 export default function Header (): JSX.Element {
@@ -10,12 +9,6 @@ export default function Header (): JSX.Element {
             <div className={'font-bold font-mono text-3xl'}>
                 Strapi OSS
             </div>
-            <Alert
-                showIcon={false}
-                type='success'
-                className={'!w-96'}
-                content={'TIP: 使用前请设置您的 API 前缀和 Token. Please set your API prefix and Token before use.'}
-            />
             <div>
                 <IconSettings
                     onClick={() => {

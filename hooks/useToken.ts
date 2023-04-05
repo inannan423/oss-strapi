@@ -19,8 +19,10 @@ export default function useToken (): {
   }
 
   const setToken = (token: string): void => {
-    localStorage.setItem('strapiToken', token)
-    window.location.reload()
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('strapiToken', token)
+      window.location.reload()
+    }
   }
 
   return {

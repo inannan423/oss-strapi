@@ -19,8 +19,10 @@ export default function useApi (): {
   }
 
   const setApiPrefix = (apiPrefix: string): void => {
-    localStorage.setItem('strapiPrefix', apiPrefix)
-    window.location.reload()
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('strapiPrefix', apiPrefix)
+      window.location.reload()
+    }
   }
 
   return {

@@ -11,7 +11,8 @@ const en = {
   cancelText: 'Cancel',
   success: 'Success',
   failed: 'Failed',
-  unknownError: 'Unknown error'
+  unknownError: 'Unknown error',
+  upload: 'Click or drag file to this area to upload'
 }
 
 export default en

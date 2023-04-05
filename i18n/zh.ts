@@ -11,7 +11,8 @@ const zh = {
   cancelText: '取消',
   success: '成功',
   failed: '失败',
-  unknownError: '未知错误'
+  unknownError: '未知错误',
+  upload: '点击或拖拽文件到此区域上传'
 }
 
 export default zh

@@ -1,11 +1,13 @@
 import { zh, en } from '@/i18n'
+import { useEffect } from 'react'
 
 export default function useLanguage (): {
   changeLanguage: (language: string) => void
   language: string
   i18n: any
 } {
-  let language: string
+  let language: string = 'zh'
+
   if (typeof window !== 'undefined') {
     if (localStorage === null || localStorage.getItem('strapilanguage') === null) {
       localStorage.setItem('strapilanguage', 'zh')
@@ -19,8 +21,10 @@ export default function useLanguage (): {
 
   // 暴露函数，用于切换语言
   const changeLanguage = (language: string): void => {
-    localStorage.setItem('strapilanguage', language)
-    window.location.reload()
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('strapilanguage', language)
+      window.location.reload()
+    }
   }
 
   const i18n = language === 'zh' ? zh : en
