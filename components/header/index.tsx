@@ -11,9 +11,10 @@ export default function Header (): JSX.Element {
                 Strapi OSS
             </div>
             <Alert
-                type='warning'
+                showIcon={false}
+                type='success'
                 className={'!w-96'}
-                content={'请设置您的 API 前缀和 Token. Please set your API prefix and Token.'}
+                content={'TIP: 使用前请设置您的 API 前缀和 Token. Please set your API prefix and Token before use.'}
             />
             <div>
                 <IconSettings

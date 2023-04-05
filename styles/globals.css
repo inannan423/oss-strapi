@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*页面滚动条*/
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 89, 60, 0.11);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(2, 255, 173, 0.11);
+}
+
