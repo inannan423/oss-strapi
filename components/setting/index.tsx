@@ -87,7 +87,7 @@ export default function Setting ({ visible, onDrawerOk, onDrawerCancel }: {
               </Form.Item>
               <div className={'w-full h-max bg-gray-100 px-2 py-3 rounded-md'}>
                 <div className={'flex gap-1 text-lg font-mono items-center justify-center'}>
-                    Made with <div className={'text-red-500'}>❤</div> by <a className={'text-blue-500'} href='https://jetlab.live' target='_blank' rel="noreferrer">JetLab</a>
+                    Made with <div className={'text-red-500'}>❤</div> by <a className={'text-blue-500'} href='https://jet-lab.site' target='_blank' rel="noreferrer">JetLab</a>
                 </div>
               </div>
               <div className={'w-full h-max bg-gray-100 px-2 py-3 rounded-md my-1'}>
