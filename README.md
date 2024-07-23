@@ -1,5 +1,79 @@
 # OSS-Strapi
 
+[中文简介](#OSS-Strapi介绍)
+
+> Implementing an Image Hosting Service and Static Resource Upload Based on Strapi
+
+- [√] Drag and Drop Upload
+- [√] Image Preview
+- [√] Delete Resources
+- [√] Upload Progress
+- [√] Copy to Clipboard
+- [√] Ctrl + V Paste Upload
+
+## Introduction to Strapi
+
+Strapi is an open-source Node.js content management framework that helps developers quickly build APIs without worrying about database configuration, data model definition, CRUD operations, and more.
+
+I noticed that its documentation includes an [Upload plugin](https://strapi.io/documentation/3.0.0-beta.x/plugins/upload.html), which helps manage media resources. By leveraging Strapi's REST API, we can use it to implement a simple image hosting service.
+
+## Installation and Configuration of Strapi
+
+### Installation  
+
+```bash
+# Install Strapi
+npx create-strapi-app@latest my-img-bed --quickstart
+```
+
+Start the project:
+
+```bash
+# Enter the project directory
+cd my-img-bed
+
+# Install dependencies
+npm install
+
+# Start the project
+npm run develop
+```
+
+### Requesting a Token
+
+In the Strapi admin panel, click **Settings** on the left, then click API Token, click **Create Token** in the upper right corner, enter the token name, click **Save**, and then copy the token. Note: The token will only be displayed once. If you forget it, you can create a new one.
+
+![token](./public/1.png)
+
+Enable token upload permissions below:
+
+![token](./public/2.png)
+
+### Deploying to a Server
+
+You need to deploy your Strapi to your server to enable the image hosting feature. Deployment is straightforward and requires the following steps:
+
+1. Install pm2
+2. Install nginx
+3. Configure nginx
+4. Configure pm2 and start the Strapi project
+
+Assuming your Strapi is deployed at `http://yourdomain.com`, your API prefix will be `http://yourdomain.com`, which will be used in the following configurations.
+
+## OSS-Strapi
+
+There are two ways to use OSS-Strapi: you can clone it to your server and run it, or you can directly access my deployed site [oss-strapi](https://oss-strapi.netlify.app/). All APIs and tokens are stored locally in the browser and will not be uploaded to my server, so you can use it with confidence.
+
+After entering oss-strapi, click **Settings** in the upper right corner, enter your Strapi address in **API Prefix**, and enter your token in **Token**. Click **Save** to start using it.
+
+![token](./public/3.png)
+
+You can upload, delete, copy, and perform other operations in the interface.
+
+If you find this helpful, please consider giving it a Star. Thank you!
+
+# OSS-Strapi介绍
+
 > 基于 Strapi 实现图床、静态资源上传
 
 - [√] 拖拽上传
